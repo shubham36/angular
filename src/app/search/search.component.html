@@ -1,0 +1,26 @@
+
+<form [formGroup]="reactiveForm" (ngSubmit)="onSubmit()">
+  <label class="label">salary</label>
+  <input class="input"
+         type="text"
+         formControlName="search">
+         <select id="filter" formControlName="filter" >
+          <option value="ls">less than</option>
+          <option value="gs">greter than</option>
+        </select>
+        <button type="submit">Submit</button>
+</form>
+<div >
+    <table  border="1">
+        <tr>
+          <th *ngFor="let col of columns">
+            {{col}}
+          </th>
+        </tr>
+        <tr *ngFor="let objs of obj ">
+          <td *ngFor="let col of columns">
+            {{objs[col]}}
+          </td>
+        </tr>
+      </table>
+</div>

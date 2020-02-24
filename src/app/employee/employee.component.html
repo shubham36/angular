@@ -1,0 +1,24 @@
+<form [formGroup]="reactiveForm" (ngSubmit)="onSubmit()" #id>
+  <label class="label">Name</label>
+  
+  <input class="input"
+         type="text"
+         formControlName="name">
+         <br><br>
+  <label class="label">Email</label>
+  <input class="input"
+         type="text"
+         formControlName="email">
+         <br><br>
+  <label class="label">Salary</label>
+  <input class="input"
+         type="password"
+         formControlName="salary">
+         <br><br>
+  <button type="submit">Submit</button>
+</form>
+<br><br>
+
+<div>
+    <a routerLink="/search" routerLinkActive="active">SEARCH BY SALARY</a>
+  </div>
